@@ -1,3 +1,5 @@
+@import url(about-blog.css);
+
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Russo+One&display=swap');
 
 @font-face {
@@ -11,9 +13,13 @@
 
     --title-color: var(--background-color);
     --title-font: "Russo One", sans-serif;
+    --title-hover-color: rgb(56,82,72,0.27);
+    --title-hover-opacity: 0.33;
 
     --options-color: #66F289;
     --options-font: 'Commodore 64 Angled';
+
+    --content-title-color: #142126;
 }
 
 body {
@@ -24,40 +30,62 @@ body {
     height: 8vh;
 
     display: flex;
-    gap: 12%;
     align-items: center;
 
     background-color: var(--header-background-color);
 }
 
 .headline__title {
-    padding: 0 0 0 4%;
-
-    color: var(--title-color);
-    font-family: var(--title-font);
-    font-size: 6vh;
-}
-
-.title__link {
-    padding: 0;
-    text-decoration: none;
-}
-
-.headline__options {
-    width: 35%;
-    padding-left: 8%;
+    height: 8vh;
+    padding: 0 10% 0 10%;
 
     display: flex;
     align-items: center;
-    column-gap: 15%;
+
+    font-family: var(--title-font);
+    font-size: 6vh;
+    box-sizing: border-box;
+}
+
+.headline__title:hover {
+    border-bottom: 0.1px solid;
+    border-color: var(--header-background-color);
+    background-color: var(--background-color);
+}
+
+.title__link {
+    text-decoration: none;
+    color: var(--title-color);
+}
+
+.headline__title:hover .title__link {
+    color: var(--header-background-color);
+}
+
+.headline__options {
+    width: 50%;
+
+    display: flex;
+    align-items: center;
 
     font-family: var(--options-font);
     color: var(--options-color);
     font-size: 4vh;
 }
 
+.topics, .blog {
+    padding: 0 1em;
+    height: 8vh;
+    
+    display: flex;
+    align-items: center;
+}
 
 .blog__link {
     text-decoration: none;
     color: var(--options-color);
+}
+
+.blog:hover, .topics:hover {
+    background-color: var(--title-hover-color);
 }
