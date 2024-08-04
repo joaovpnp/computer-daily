@@ -11,7 +11,7 @@
 
     --title-color: var(--background-color);
     --title-font: "Russo One", sans-serif;
-    
+
     --options-color: #66F289;
     --options-font: 'Commodore 64 Angled';
 }
@@ -36,6 +36,11 @@ body {
     color: var(--title-color);
     font-family: var(--title-font);
     font-size: 6vh;
+}
+
+.title__link {
+    padding: 0;
+    text-decoration: none;
 }
 
 .headline__options {
